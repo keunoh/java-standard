@@ -37,5 +37,6 @@ class Practice1 {
         //스트림은 일회용이다.
         strStream1.sorted().forEach(System.out::println);
 //        int numOfStr = strStream1.count();  //에러 : 스트림이 이미 닫혔음.
+
     }
 }
