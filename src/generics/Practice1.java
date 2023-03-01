@@ -26,7 +26,7 @@ class Practice1 {
     }
 }
 
-class Box {
+class Box1 {
     Object item;
 
     void setItem(Object item) {
