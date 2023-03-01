@@ -3,6 +3,9 @@ package stream;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class Practice1 {
@@ -27,5 +30,12 @@ class Practice1 {
             System.out.println(str);
         for (String str : strList)
             System.out.println(str);
+
+        //정렬된 결과를 새로운 List에 담아서 반환한다.
+        List<String> sortedList = strStream2.sorted().collect(Collectors.toList());
+
+        //스트림은 일회용이다.
+        strStream1.sorted().forEach(System.out::println);
+//        int numOfStr = strStream1.count();  //에러 : 스트림이 이미 닫혔음.
     }
 }
