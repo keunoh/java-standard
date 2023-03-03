@@ -8,7 +8,7 @@ public class ExceptionEx6 {
             System.out.println(3);
             System.out.println(0/0);
             System.out.println(4); //실행되지 않는다.
-        } catch (Exception e) {
+        } catch (Exception e) { // ArithmeticException 대신 Exception 을 사용
             System.out.println(5);
         } //try-catch 끝
         System.out.println(6);
