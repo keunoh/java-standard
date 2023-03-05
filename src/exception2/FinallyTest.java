@@ -1,4 +1,4 @@
-package exception;
+package exception2;
 
 public class FinallyTest {
     public static void main(String[] args) {
