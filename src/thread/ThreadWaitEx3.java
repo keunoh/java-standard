@@ -1,6 +1,8 @@
 package thread;
 
 import java.util.ArrayList;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 
 class Customer implements Runnable {
     private Table table;
@@ -53,41 +55,51 @@ class Table {
     final int MAX_FOOD = 6;
     private ArrayList<String> dishes = new ArrayList<>();
 
+    private ReentrantLock lock = new ReentrantLock();
+    private Condition forCook = lock.newCondition();
+    private Condition forCust = lock.newCondition();
+
     public synchronized void add(String dish) {
-        while (dishes.size() >= MAX_FOOD) {
-            String name = Thread.currentThread().getName();
-            System.out.println(name + " is waiting.");
-            try {
-                wait(); //COOOK 쓰레드를 기다리게 한다.
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
+        lock.lock();
 
-            }
-        }
-        dishes.add(dish);
-        notify();   //기다리고 있는 CUST를 깨우기 위함.
-        System.out.println("Dishes:" + dishes.toString());
-    }
-
-    public void remove(String dishName) {
-        synchronized (this) {
-            String name = Thread.currentThread().getName();
-
-            while (dishes.size() == 0) {
+        try {
+            while (dishes.size() >= MAX_FOOD) {
+                String name = Thread.currentThread().getName();
                 System.out.println(name + " is waiting.");
                 try {
-                    wait(); //CUST 쓰레드를 기다리게 한다.
+                    forCook.await(); // wait(); //COOOK 쓰레드를 기다리게 한다.
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
 
                 }
             }
+            dishes.add(dish);
+            forCust.signal();   //notify() 기다리고 있는 Cust를 깨우기 위함
+            System.out.println("Dishes: " + dishes.toString());
+        } finally {
+            lock.unlock();
+        }
+    }
 
+    public void remove(String dishName) {
+        lock.lock();
+        String name = Thread.currentThread().getName();
+
+        try {
+            while (dishes.size() == 0) {
+                System.out.println(name + " is waiting.");
+                try {
+                    forCust.await(); // wait(); //CUST 쓰레드를 기다리게 한다.
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+
+                }
+            }
             while (true) {
                 for (int i = 0; i < dishes.size(); i++) {
                     if (dishName.equals(dishes.get(i))) {
                         dishes.remove(i);
-                        notify();   //잠자고 있는 COOK을 깨우기 위함
+                        forCook.signal(); // notify();   //잠자고 있는 COOK을 깨우기 위함
                         return;
                     }
                 }
@@ -100,9 +112,10 @@ class Table {
 
                 }
             }
+        } finally {
+                lock.unlock();
         }
     }
-
     public int dishNum() {
         return dishNames.length;
     }
