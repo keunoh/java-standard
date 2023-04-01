@@ -1,8 +1,10 @@
 package javaenum;
 
-enum Direction { EAST, SOUTH, WEST, NORTH }
 
 public class EnumEx1 {
+    enum Direction { EAST, SOUTH, WEST, NORTH
+
+    }
     public static void main(String[] args) {
         Direction d1 = Direction.EAST;
         Direction d2 = Direction.valueOf("WEST");
