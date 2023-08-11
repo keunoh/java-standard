@@ -11,12 +11,18 @@ public class HashSetEx5 {
         HashSet setKyo = new HashSet();
         HashSet setCha = new HashSet();
 
-        setA.add("1"); setA.add("2"); setA.add("3");
-        setA.add("4"); setA.add("5");
+        setA.add("1");
+        setA.add("2");
+        setA.add("3");
+        setA.add("4");
+        setA.add("5");
         System.out.println("setA = " + setA);
 
-        setB.add("4"); setB.add("5"); setB.add("6");
-        setB.add("7"); setB.add("8");
+        setB.add("4");
+        setB.add("5");
+        setB.add("6");
+        setB.add("7");
+        setB.add("8");
         System.out.println("setB = " + setB);
 
         Iterator it = setB.iterator();

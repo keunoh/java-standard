@@ -21,7 +21,8 @@ class ThreadEx11_1 extends Thread {
     public void run() {
         try {
             sleep(5 * 1000);
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 }
 
@@ -42,8 +43,8 @@ class ThreadEx11_2 extends Thread {
             StackTraceElement[] ste = (StackTraceElement[]) (map.get(obj));
 
             System.out.println("[" + ++x + "] name : " + t.getName()
-                + ", group : " + t.getThreadGroup().getName()
-                + ", daemon : " + t.isDaemon());
+                    + ", group : " + t.getThreadGroup().getName()
+                    + ", daemon : " + t.isDaemon());
 
             for (int i = 0; i < ste.length; i++) {
                 System.out.println(ste[i]);

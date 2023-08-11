@@ -1,3 +1,4 @@
+package outer;
 public class TV {
     String color;
     boolean power;
@@ -6,9 +7,11 @@ public class TV {
     void power() {
         power = !power;
     }
+
     void channelUp() {
         ++channel;
     }
+
     void channelDown() {
         --channel;
     }

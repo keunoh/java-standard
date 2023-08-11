@@ -8,7 +8,7 @@ public class HashSetLotto {
 
         for (int i = 0; set.size() < 6; i++) {
             int num = (int) (Math.random() * 45) + 1;
-            set.add(new Integer(num));
+            set.add(Integer.valueOf(num));
         }
 
         List list = new LinkedList(set);    //LinkedList(Collection c)

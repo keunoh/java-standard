@@ -13,7 +13,8 @@ public class ThreadEx19 {
         try {
             th1.join();
             th2.join();
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
 
         System.out.print("소요시간:" + (System.currentTimeMillis() - ThreadEx19.startTime));
     }
@@ -23,7 +24,7 @@ class ThreadEx19_1 extends Thread {
     public void run() {
         for (int i = 0; i < 300; i++) {
             System.out.print("-");
-            for (int x = 0; x < 10000000; x++);
+            for (int x = 0; x < 10000000; x++) ;
         }
     }
 }
@@ -32,7 +33,7 @@ class ThreadEx19_2 extends Thread {
     public void run() {
         for (int i = 0; i < 300; i++) {
             System.out.print("|");
-            for (int x = 0; x < 10000000; x++);
+            for (int x = 0; x < 10000000; x++) ;
         }
     }
 }

@@ -24,8 +24,8 @@ public class ExpValidCheck {
             for (int i = 0; i < expression.length(); i++) {
                 char ch = expression.charAt(i);
 
-                if (ch == '('){
-                    st.push(ch + "");
+                if (ch == '(') {
+                    st.push(String.valueOf(ch));
                 } else if (ch == ')') {
                     st.pop();
                 }

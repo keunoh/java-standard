@@ -13,8 +13,13 @@ public class EnumEx2 {
             this.symbol = symbol;
         }
 
-        public int getValue() { return value; }
-        public String getSymbol() { return symbol; }
+        public int getValue() {
+            return value;
+        }
+
+        public String getSymbol() {
+            return symbol;
+        }
 
         public static Direction of(int dir) {
             if (dir < 1 || dir > 4) {

@@ -1,3 +1,4 @@
+package outer;
 public class OperatorEx28 {
     public static void main(String[] args) {
         int x = 0xAB, y = 0xF;

@@ -3,8 +3,13 @@ package generics;
 class Juice {
     String name;
 
-    Juice(String name) { this.name = name + "Juice"; }
-    public String toString() { return name; }
+    Juice(String name) {
+        this.name = name + "Juice";
+    }
+
+    public String toString() {
+        return name;
+    }
 }
 
 class Juicer {
@@ -32,4 +37,5 @@ public class FruitBoxEx3 {
     } //main
 }
 
-class FruitBox<T extends Fruit> extends Box<T> { }
+class FruitBox<T extends Fruit> extends Box<T> {
+}

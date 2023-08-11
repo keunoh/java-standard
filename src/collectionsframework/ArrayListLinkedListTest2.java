@@ -18,7 +18,7 @@ public class ArrayListLinkedListTest2 {
 
     public static void add(List list) {
         for (int i = 0; i < 1000000; i++)
-            list.add(i + "");
+            list.add(String.valueOf(i));
     }
 
     public static long access(List list) {

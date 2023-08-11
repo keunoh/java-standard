@@ -6,7 +6,7 @@ public class ExceptionEx8 {
         System.out.println(2);
         try {
             System.out.println(3);
-            System.out.println(0/0); //예외발생
+            System.out.println(0 / 0); //예외발생
             System.out.println(4); //실행되지 않는다.
         } catch (ArithmeticException ae) { // 참조변수 ae를 통해, 생성된 ArithmeticException 인스턴스에 접근 가능
             ae.printStackTrace();

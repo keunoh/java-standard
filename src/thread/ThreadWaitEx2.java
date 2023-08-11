@@ -15,8 +15,8 @@ public class ThreadWaitEx2 {
     }
 
     static class Customer implements Runnable {
-        private Table table;
-        private String food;
+        private final Table table;
+        private final String food;
 
         public Customer(Table table, String food) {
             this.table = table;
@@ -46,7 +46,7 @@ public class ThreadWaitEx2 {
     }
 
     static class Cook implements Runnable {
-        private Table table;
+        private final Table table;
 
         Cook(Table table) {
             this.table = table;
@@ -69,13 +69,13 @@ public class ThreadWaitEx2 {
     static class Table {
         String[] dishNames = {"donut", "donut", "burger"};
         final int MAX_FOOD = 6;
-        private ArrayList<String> dishes = new ArrayList<>();
+        private final ArrayList<String> dishes = new ArrayList<>();
 
         public synchronized void add(String dish) {
             if (dishes.size() >= MAX_FOOD)
                 return;
             dishes.add(dish);
-            System.out.println("Dishes:" + dishes.toString());
+            System.out.println("Dishes:" + dishes);
         }
 
         public boolean remove(String dishName) {
@@ -94,7 +94,7 @@ public class ThreadWaitEx2 {
                             dishes.remove(i);
                             return true;
                         }
-                 }
+                }
             }
             return false;
         }

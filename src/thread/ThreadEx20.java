@@ -45,7 +45,13 @@ class ThreadEx20_1 extends Thread {
         usedMemory -= 300;
         if (usedMemory < 0) usedMemory = 0;
     }
-    public int totalMemory() { return MAX_MEMORY; }
-    public int freeMemory() { return MAX_MEMORY - usedMemory; }
+
+    public int totalMemory() {
+        return MAX_MEMORY;
+    }
+
+    public int freeMemory() {
+        return MAX_MEMORY - usedMemory;
+    }
 
 }

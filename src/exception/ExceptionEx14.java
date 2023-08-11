@@ -11,6 +11,6 @@ public class ExceptionEx14 {
     } //main 메서드의 끝
 
     private static void method1() throws Exception {
-            throw new Exception();
+        throw new Exception();
     } // method1의 끝
 }

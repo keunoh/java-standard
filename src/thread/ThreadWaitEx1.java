@@ -16,8 +16,8 @@ public class ThreadWaitEx1 {
 
 
     static class Customer implements Runnable {
-        private Table table;
-        private String food;
+        private final Table table;
+        private final String food;
 
         public Customer(Table table, String food) {
             this.table = table;
@@ -47,7 +47,7 @@ public class ThreadWaitEx1 {
     }
 
     static class Cook implements Runnable {
-        private Table table;
+        private final Table table;
 
         public Cook(Table table) {
             this.table = table;
@@ -70,17 +70,17 @@ public class ThreadWaitEx1 {
     }
 
     static class Table {
-        String[] dishNames = { "donut", "donut", "burger"}; // donut 이 더 자주 나온다.
+        String[] dishNames = {"donut", "donut", "burger"}; // donut 이 더 자주 나온다.
         final int MAX_FOOD = 6; //테이블에 놓일 수 있는 최대 음식의 개수
 
-        private ArrayList<String> dishes = new ArrayList<>();
+        private final ArrayList<String> dishes = new ArrayList<>();
 
         public void add(String dish) {
             //테이블에 음식이 가득찼으면, 테이블에 음식을 추가하지 않는다.
             if (dishes.size() >= MAX_FOOD)
                 return;
             dishes.add(dish);
-            System.out.println("Dishes:" + dishes.toString());
+            System.out.println("Dishes:" + dishes);
         }
 
         public boolean remove(String dishName) {

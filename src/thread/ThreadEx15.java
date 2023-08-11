@@ -22,7 +22,8 @@ public class ThreadEx15 {
             th2.stop();
             Thread.sleep(2000);
             th3.stop();
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 }
 
@@ -34,7 +35,8 @@ class RunImplEx15 implements Runnable {
             System.out.println(Thread.currentThread().getName());
             try {
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+            }
         }
     }
 }

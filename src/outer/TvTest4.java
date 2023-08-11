@@ -1,3 +1,4 @@
+package outer;
 public class TvTest4 {
     public static void main(String[] args) {
         TV[] tvArr = new TV[3];

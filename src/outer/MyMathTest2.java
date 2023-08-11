@@ -1,8 +1,10 @@
+package outer;
 class MyMath2 {
     long a, b;
 
     long add() {
-        return a + b;}
+        return a + b;
+    }
 
     long subtract() {
         return a - b;
@@ -33,6 +35,7 @@ class MyMath2 {
     }
 
 }
+
 class MyMathTest2 {
     public static void main(String[] args) {
         System.out.println(MyMath2.add(200L, 100L));

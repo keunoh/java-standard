@@ -1,3 +1,4 @@
+package outer;
 public class ReferenceParamEx3 {
     public static void main(String[] args) {
         int[] arr = new int[]{3, 2, 1, 6, 5, 4};
@@ -9,7 +10,7 @@ public class ReferenceParamEx3 {
     }
 
     static void printArr(int[] arr) {
-        System.out.printf("[");
+        System.out.print("[");
 
         for (int i : arr) {
             System.out.printf(i + ",");
@@ -31,7 +32,7 @@ public class ReferenceParamEx3 {
                 if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j];
                     arr[j] = arr[j + 1];
-                    arr[j+1] = tmp;
+                    arr[j + 1] = tmp;
                 }
             }
         }

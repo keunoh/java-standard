@@ -26,6 +26,7 @@ public class ExceptionEx15 {
     static void createNewFile(File f) {
         try {
             f.createNewFile(); // 파일을 생성한다.
-        } catch (Exception e) { }
+        } catch (Exception e) {
+        }
     } // createNewFile 메서드 끝
 }

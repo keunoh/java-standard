@@ -1,3 +1,4 @@
+package outer;
 public class Jinsu {
     public static void main(String[] args) {
 

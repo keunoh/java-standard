@@ -11,7 +11,7 @@ public class ArrayListEx2 {
 
         List list = new ArrayList(length / LIMIT + 10); // 크기를 약간 여유있게 잡는다.
 
-        for (int i = 0; i < length; i+=LIMIT) {
+        for (int i = 0; i < length; i += LIMIT) {
             if (i + LIMIT < length)
                 list.add(source.substring(i, i + LIMIT));
             else

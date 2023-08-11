@@ -1,3 +1,4 @@
+package outer;
 public class CallStackTest {
     public static void main(String[] args) {
         firstMethod();

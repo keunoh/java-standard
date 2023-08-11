@@ -24,7 +24,8 @@ public class ThreadEx16 {
             r2.stop();
             Thread.sleep(2000);
             r3.stop();
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 }
 
@@ -40,13 +41,22 @@ class RunImplEx16 implements Runnable {
                 System.out.println(Thread.currentThread().getName());
                 try {
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {}
+                } catch (InterruptedException e) {
+                }
             }
         }
         System.out.println(Thread.currentThread().getName() + " - stopped");
     }
 
-    public void suspend() { suspended = true;}
-    public void resume() { suspended = false; }
-    public void stop() { stopped = true; }
+    public void suspend() {
+        suspended = true;
+    }
+
+    public void resume() {
+        suspended = false;
+    }
+
+    public void stop() {
+        stopped = true;
+    }
 }

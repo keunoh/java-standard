@@ -1,3 +1,4 @@
+package outer;
 import java.util.Scanner;
 
 public class MultiArrEx1 {
@@ -23,12 +24,12 @@ public class MultiArrEx1 {
         }
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.printf("좌표 입력하셈 종료는 00 >> ");
+            System.out.print("좌표 입력하셈 종료는 00 >> ");
             String input = scanner.nextLine();
             if (input.length() == 2) {
                 x = input.charAt(0) - '0';
                 y = input.charAt(1) - '0';
-                if (x==0 && y==0) break;
+                if (x == 0 && y == 0) break;
             }
             if (input.length() != 2 || x <= 0 || x >= SIZE || y <= 0 || y >= SIZE) {
                 System.out.println("잘못된 입력입니다 다시입력하셈");

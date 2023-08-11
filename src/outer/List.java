@@ -1,3 +1,4 @@
+package outer;
 //import java.util.*;
 //import java.util.function.UnaryOperator;
 //

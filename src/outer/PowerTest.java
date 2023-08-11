@@ -1,3 +1,4 @@
+package outer;
 public class PowerTest {
     public static void main(String[] args) {
         int x = 2;

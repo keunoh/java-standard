@@ -2,9 +2,11 @@ package javaenum;
 
 
 public class EnumEx1 {
-    enum Direction { EAST, SOUTH, WEST, NORTH
+    enum Direction {
+        EAST, SOUTH, WEST, NORTH
 
     }
+
     public static void main(String[] args) {
         Direction d1 = Direction.EAST;
         Direction d2 = Direction.valueOf("WEST");
@@ -23,15 +25,20 @@ public class EnumEx1 {
 
         switch (d1) {
             case EAST:  //Direction.EAST 라고 쓸 수 없다.:
-                System.out.println("The direction is EAST."); break;
+                System.out.println("The direction is EAST.");
+                break;
             case SOUTH:
-                System.out.println("The direction is SOUTH."); break;
+                System.out.println("The direction is SOUTH.");
+                break;
             case WEST:
-                System.out.println("The direction is WEST."); break;
+                System.out.println("The direction is WEST.");
+                break;
             case NORTH:
-                System.out.println("The direction is NORTH."); break;
+                System.out.println("The direction is NORTH.");
+                break;
             default:
-                System.out.println("Invalid direction."); break;
+                System.out.println("Invalid direction.");
+                break;
         }
 
         Direction[] dArr = Direction.values();

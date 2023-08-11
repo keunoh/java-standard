@@ -1,3 +1,4 @@
+package outer;
 public class OperatorEx30 {
     static String toBinaryString(int x) {
         String zero = "0000000000000000000000000000000000000000";

@@ -1,3 +1,4 @@
+package outer;
 import java.util.Scanner;
 
 public class FlowEx25 {

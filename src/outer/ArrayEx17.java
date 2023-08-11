@@ -1,3 +1,4 @@
+package outer;
 public class ArrayEx17 {
     public static void main(String[] args) {
         if (args.length != 3) {

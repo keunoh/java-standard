@@ -1,10 +1,11 @@
+package outer;
 public class CastingEx4 {
     public static void main(String[] args) {
         int i = 91234567;
         float f = (float) i;
         int i2 = (int) f;
 
-        double d = (double) i;
+        double d = i;
         int i3 = (int) d;
 
         float f2 = 1.666f;

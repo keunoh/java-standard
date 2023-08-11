@@ -13,7 +13,7 @@ public class NetworkEx1 {
             ip = InetAddress.getByName("www.naver.com");
             System.out.println("getHostName() : " + ip.getHostName());
             System.out.println(ip.getHostAddress());
-            System.out.println(ip.toString());
+            System.out.println(ip);
 
             byte[] ipAddr = ip.getAddress();
             System.out.println(Arrays.toString(ipAddr));

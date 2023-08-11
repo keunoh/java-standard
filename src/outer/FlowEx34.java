@@ -1,3 +1,4 @@
+package outer;
 import java.util.Scanner;
 
 public class FlowEx34 {
@@ -37,13 +38,13 @@ public class FlowEx34 {
                 switch (menu) {
                     case 1:
                         System.out.println("result=" + num * num);
-                        break ;
+                        break;
                     case 2:
                         System.out.println("result=" + Math.sqrt(num));
-                        break ;
+                        break;
                     case 3:
                         System.out.println("result=" + Math.log(num));
-                        break ;
+                        break;
                 }
             }
         }

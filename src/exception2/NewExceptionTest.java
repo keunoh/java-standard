@@ -20,14 +20,16 @@ public class NewExceptionTest {
 
     }
 
-    private static void deleteTempFiles() {}
+    private static void deleteTempFiles() {
+    }
 
-    private static void copyFiles() {}
+    private static void copyFiles() {
+    }
 
     static void startInstall() throws SpaceException, MemoryException {
-        if(!enoughSpace())
+        if (!enoughSpace())
             throw new SpaceException("설치할 공간이 부족합니다.");
-        if(!enoughMemory())
+        if (!enoughMemory())
             throw new MemoryException("메모리가 부족합니다.");
     }
 

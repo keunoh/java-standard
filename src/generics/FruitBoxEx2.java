@@ -3,13 +3,31 @@ package generics;
 import java.util.ArrayList;
 
 class Fruit2 implements Eatable {
-    public String toString() { return "Fruit"; }
+    public String toString() {
+        return "Fruit";
+    }
 }
-class Apple2 extends Fruit2 { public String toString() { return "Apple"; }}
-class Grape2 extends Fruit2 { public String toString() { return "Grape"; }}
-class Toy2 { public String toString() { return "Toy"; }}
 
-interface Eatable {}
+class Apple2 extends Fruit2 {
+    public String toString() {
+        return "Apple";
+    }
+}
+
+class Grape2 extends Fruit2 {
+    public String toString() {
+        return "Grape";
+    }
+}
+
+class Toy2 {
+    public String toString() {
+        return "Toy";
+    }
+}
+
+interface Eatable {
+}
 
 class FruitBoxEx2 {
     public static void main(String[] args) {
@@ -32,12 +50,25 @@ class FruitBoxEx2 {
     } //main
 }
 
-class FruitBox2<T extends Fruit2 & Eatable> extends Box3<T> {}
+class FruitBox2<T extends Fruit2 & Eatable> extends Box3<T> {
+}
 
 class Box3<T> {
     ArrayList<T> list = new ArrayList<>();
-    void add(T item) { list.add(item); }
-    T get(int i) { return list.get(i); }
-    int size() { return list.size(); }
-    public String toString() { return list.toString(); }
+
+    void add(T item) {
+        list.add(item);
+    }
+
+    T get(int i) {
+        return list.get(i);
+    }
+
+    int size() {
+        return list.size();
+    }
+
+    public String toString() {
+        return list.toString();
+    }
 }

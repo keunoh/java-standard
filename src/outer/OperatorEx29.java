@@ -1,3 +1,4 @@
+package outer;
 public class OperatorEx29 {
     public static void main(String[] args) {
         byte p = 10;
@@ -9,7 +10,7 @@ public class OperatorEx29 {
         System.out.printf("~~p = %d \t\t%s%n", ~~p, toBinaryString(~~p));
         System.out.println();
         System.out.printf(" n = %d%n", n);
-        System.out.printf("~(n-1)=%d%n", ~(n-1));
+        System.out.printf("~(n-1)=%d%n", ~(n - 1));
     }
 
     static String toBinaryString(int x) {

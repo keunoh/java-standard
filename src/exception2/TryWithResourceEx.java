@@ -35,9 +35,13 @@ class CloseableResource implements AutoCloseable {
 }
 
 class WorkException extends Exception {
-    WorkException(String msg) { super(msg); }
+    WorkException(String msg) {
+        super(msg);
+    }
 }
 
 class CloseException extends Exception {
-    CloseException(String msg) { super(msg); }
+    CloseException(String msg) {
+        super(msg);
+    }
 }

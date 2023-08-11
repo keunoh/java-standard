@@ -1,3 +1,5 @@
+package outer;
+
 public class ArrayEx1 {
     public static void main(String[] args) {
         int[] score = new int[5];
@@ -5,7 +7,7 @@ public class ArrayEx1 {
 
         score[0] = 50;
         score[1] = 60;
-        score[k+1] = 70;
+        score[k + 1] = 70;
         score[3] = 80;
         score[4] = 90;
 

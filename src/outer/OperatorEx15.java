@@ -1,3 +1,4 @@
+package outer;
 public class OperatorEx15 {
     public static void main(String[] args) {
         char lowerCase = 'a';

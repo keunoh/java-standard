@@ -1,3 +1,4 @@
+package outer;
 public class ArrayEx8 {
     public static void main(String[] args) {
         int[] ball = new int[45];
@@ -10,7 +11,7 @@ public class ArrayEx8 {
         int j = 0;
 
         for (int i = 0; i < 6; i++) {
-            j = (int)(Math.random() * 45);
+            j = (int) (Math.random() * 45);
             temp = ball[i];
             ball[i] = ball[j];
             ball[j] = temp;

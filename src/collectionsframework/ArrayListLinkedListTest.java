@@ -31,7 +31,7 @@ public class ArrayListLinkedListTest {
     public static long add1(List list) {
         long start = System.currentTimeMillis();
         for (int i = 0; i < 1000000; i++)
-            list.add(i + "");
+            list.add(String.valueOf(i));
         long end = System.currentTimeMillis();
         return end - start;
     }

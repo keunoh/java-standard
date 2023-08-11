@@ -21,7 +21,8 @@ public class ThreadEx18 {
             th1.stop();
             Thread.sleep(2000);
             th3.stop();
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 
 }
@@ -67,6 +68,11 @@ class ThreadEx18_1 implements Runnable {
         System.out.println(th.getName() + " - interrupt() by stop()");
     }
 
-    public void resume() { suspended = false; }
-    public void start() { th.start(); }
+    public void resume() {
+        suspended = false;
+    }
+
+    public void start() {
+        th.start();
+    }
 }

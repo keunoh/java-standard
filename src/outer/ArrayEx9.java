@@ -1,3 +1,4 @@
+package outer;
 import java.util.Arrays;
 
 public class ArrayEx9 {

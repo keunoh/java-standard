@@ -5,8 +5,8 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 class Customer implements Runnable {
-    private Table table;
-    private String food;
+    private final Table table;
+    private final String food;
 
     public Customer(Table table, String food) {
         this.table = table;
@@ -30,7 +30,7 @@ class Customer implements Runnable {
 }
 
 class Cook implements Runnable {
-    private Table table;
+    private final Table table;
 
     public Cook(Table table) {
         this.table = table;
@@ -51,13 +51,13 @@ class Cook implements Runnable {
 }
 
 class Table {
-    String[] dishNames = { "donut", "donut", "burger"};
+    String[] dishNames = {"donut", "donut", "burger"};
     final int MAX_FOOD = 6;
-    private ArrayList<String> dishes = new ArrayList<>();
+    private final ArrayList<String> dishes = new ArrayList<>();
 
-    private ReentrantLock lock = new ReentrantLock();
-    private Condition forCook = lock.newCondition();
-    private Condition forCust = lock.newCondition();
+    private final ReentrantLock lock = new ReentrantLock();
+    private final Condition forCook = lock.newCondition();
+    private final Condition forCust = lock.newCondition();
 
     public synchronized void add(String dish) {
         lock.lock();
@@ -113,9 +113,10 @@ class Table {
                 }
             }
         } finally {
-                lock.unlock();
+            lock.unlock();
         }
     }
+
     public int dishNum() {
         return dishNames.length;
     }

@@ -11,9 +11,9 @@ public class TreeMapEx1 {
         for (int i = 0; i < data.length; i++) {
             if (map.containsKey(data[i])) {
                 Integer value = (Integer) map.get(data[i]);
-                map.put(data[i], new Integer(value.intValue() + 1));
+                map.put(data[i], Integer.valueOf(value.intValue() + 1));
             } else {
-                map.put(data[i], new Integer(1));
+                map.put(data[i], Integer.valueOf(1));
             }
         }
 
@@ -47,9 +47,7 @@ public class TreeMapEx1 {
     static class ValueComparator implements Comparator {
         @Override
         public int compare(Object o1, Object o2) {
-            if (o1 instanceof Map.Entry && o2 instanceof Map.Entry) {
-                Map.Entry e1 = (Map.Entry) o1;
-                Map.Entry e2 = (Map.Entry) o2;
+            if (o1 instanceof Map.Entry e1 && o2 instanceof Map.Entry e2) {
 
                 int v1 = ((Integer) e1.getValue()).intValue();
                 int v2 = ((Integer) e2.getValue()).intValue();

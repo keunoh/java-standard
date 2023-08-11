@@ -1,3 +1,4 @@
+package outer;
 import java.util.Scanner;
 
 public class MultiArrEx4 {
@@ -14,7 +15,7 @@ public class MultiArrEx4 {
             if (tmp.equals(words[i][1])) {
                 System.out.printf("정답입니다.%n%n");
             } else {
-                System.out.printf("틀렸습니다. 정답은 %s입니다.%n%n",words[i][1]);
+                System.out.printf("틀렸습니다. 정답은 %s입니다.%n%n", words[i][1]);
             }
         }
     }

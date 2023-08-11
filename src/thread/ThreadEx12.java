@@ -8,8 +8,9 @@ public class ThreadEx12 {
         th2.start();
 
         try {
-            th1.sleep(2000);
-        } catch (InterruptedException e) {}
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        }
 
         System.out.print("<<main 종료>>");
     }

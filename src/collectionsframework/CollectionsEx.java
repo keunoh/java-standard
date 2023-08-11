@@ -3,6 +3,7 @@ package collectionsframework;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+
 import static java.util.Collections.*;
 
 public class CollectionsEx {

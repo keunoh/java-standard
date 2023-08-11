@@ -12,7 +12,12 @@ public class FinallyTest2 {
         }
     }
 
-    static void startInstall() {}
-    static void copyFiles() {}
-    static void deleteTempFiles() {}
+    static void startInstall() {
+    }
+
+    static void copyFiles() {
+    }
+
+    static void deleteTempFiles() {
+    }
 }

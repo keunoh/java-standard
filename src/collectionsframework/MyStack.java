@@ -32,10 +32,10 @@ public class MyStack extends Vector {
 
     public int search(Object o) {
         int i = lastIndexOf(o); //끝에서부터 객체를 찾는다.
-                                //반환값은 저장된 위치(배열의 index)이다.
+        //반환값은 저장된 위치(배열의 index)이다.
         if (i >= 0) { //객체를 찾은 경우
             return size() - i;  //Stack은 맨 위에 저장된 객체의 index를 1로 정의하기 때문에
-                                //계산을 통해서 구한다.
+            //계산을 통해서 구한다.
         }
 
         return -1;  //해당 객체를 찾지 못하면 -1을 반환한다.

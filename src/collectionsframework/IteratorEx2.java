@@ -10,7 +10,7 @@ public class IteratorEx2 {
         ArrayList copy2 = new ArrayList(10);
 
         for (int i = 0; i < 10; i++)
-            original.add(i + "");
+            original.add(String.valueOf(i));
 
         Iterator it = original.iterator();
 

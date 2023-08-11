@@ -29,15 +29,18 @@ public class ChainedExceptionEx {
     }
 
     static void startInstall() throws SpaceException, MemoryException {
-        if(!enoughSpace())
+        if (!enoughSpace())
             throw new SpaceException("설치할 공간이 부족합니다.");
-        if(!enoughMemory())
+        if (!enoughMemory())
             throw new MemoryException("메모리가 부족합니다.");
 //            throw new RuntimeException(new MemoryException("메모리가 부족합니다."));
     }
 
-    static void copyFiles() {}
-    static void deleteTempFiles() {}
+    static void copyFiles() {
+    }
+
+    static void deleteTempFiles() {
+    }
 
     static boolean enoughSpace() {
         return false;

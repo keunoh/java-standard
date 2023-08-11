@@ -1,3 +1,4 @@
+package outer;
 public class ArrayEx11 {
     public static void main(String[] args) {
         int[] numArr = new int[10];

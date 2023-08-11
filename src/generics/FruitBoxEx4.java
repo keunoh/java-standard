@@ -13,7 +13,9 @@ class Fruit4 {
         this.weight = weight;
     }
 
-    public String toString() { return name + "(" + weight + ")"; }
+    public String toString() {
+        return name + "(" + weight + ")";
+    }
 }
 
 class Apple4 extends Fruit4 {
@@ -71,13 +73,29 @@ class FruitBoxEx4 {
     } //main
 }
 
-class FruitBox4<T extends Fruit4> extends Box4<T> {}
+class FruitBox4<T extends Fruit4> extends Box4<T> {
+}
 
 class Box4<T> {
     ArrayList<T> list = new ArrayList<>();
-    void add(T item) { list.add(item); }
-    T get (int i) { return list.get(i); }
-    ArrayList<T> getList() { return list; }
-    int size() { return list.size(); }
-    public String toString() { return list.toString(); }
+
+    void add(T item) {
+        list.add(item);
+    }
+
+    T get(int i) {
+        return list.get(i);
+    }
+
+    ArrayList<T> getList() {
+        return list;
+    }
+
+    int size() {
+        return list.size();
+    }
+
+    public String toString() {
+        return list.toString();
+    }
 }

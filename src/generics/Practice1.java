@@ -9,7 +9,7 @@ class Practice1 {
         Box2<String> b = new Box2<String>(); //타입 T 대신, 실제 타입을 지정
 //        b.setItem(new Object()); //에러. String 이외의 타입은 지정불가
         b.setItem("ABC");
-        String itemA = (String) b.getItem();
+        String itemA = b.getItem();
         String itemB = b.getItem(); //형변환이 필요없음
 
         //지네릭 도입되기 이전의 코드
@@ -37,10 +37,16 @@ class Box1 {
         return item;
     }
 }
+
 //지네릭스 형식으로 바꾸는 경우
 class Box2<T> { //지네릭 타입 T를 선언
     T item;
 
-    void setItem(T item) { this.item = item;}
-    T getItem() { return item; }
+    void setItem(T item) {
+        this.item = item;
+    }
+
+    T getItem() {
+        return item;
+    }
 }

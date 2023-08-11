@@ -10,7 +10,7 @@ public class FinallyTest3 {
         try {
             System.out.println("method1()이 호출되었습니다.");
             //return 문을 만나도 finally 블록의 문장들은 수행된다.
-            return; //현재 실행중인 메서드를 종료한다.
+            //현재 실행중인 메서드를 종료한다.
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

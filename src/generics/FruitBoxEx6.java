@@ -6,7 +6,7 @@ public class FruitBoxEx6 {
         Box box = null;
         Box<Object> objBox = null;
 
-        box = (Box) objBox;         //OK. 지네릭 타입 -> 원시 타입. 경고발생
+        box = objBox;         //OK. 지네릭 타입 -> 원시 타입. 경고발생
         objBox = (Box<Object>) box; //OK. 원시 타입 -> 지네릭 타입. 경고발생
     }
 }

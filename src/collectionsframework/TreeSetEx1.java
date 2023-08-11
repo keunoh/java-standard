@@ -9,10 +9,18 @@ public class TreeSetEx1 {
         String from = "b";
         String to = "d";
 
-        set.add("abc"); set.add("alien"); set.add("bat");
-        set.add("car"); set.add("grape"); set.add("disc");
-        set.add("dance"); set.add("dZZZZ"); set.add("dzzzz");
-        set.add("love"); set.add("lift"); set.add("fan");
+        set.add("abc");
+        set.add("alien");
+        set.add("bat");
+        set.add("car");
+        set.add("grape");
+        set.add("disc");
+        set.add("dance");
+        set.add("dZZZZ");
+        set.add("dzzzz");
+        set.add("love");
+        set.add("lift");
+        set.add("fan");
         set.add("flower");
 
         System.out.println(set);
