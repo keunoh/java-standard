@@ -7,5 +7,7 @@ public class Main {
         System.out.println(a * b * c * d);
         Runnable hello = () -> System.out.println("hello world!f");
         hello.run();
+
+
     }
 }
