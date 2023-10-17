@@ -1,14 +1,15 @@
-package outer;
+package ch6.method;
+
 public class CallStackTest {
     public static void main(String[] args) {
         firstMethod();
     }
 
-    static void firstMethod() {
+    private static void firstMethod() {
         secondMethod();
     }
 
-    static void secondMethod() {
+    private static void secondMethod() {
         System.out.println("CallStackTest.secondMethod");
     }
 }
