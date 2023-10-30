@@ -130,7 +130,18 @@
   - 패키지는 점(.)을 구분자로 하여 계층구조로 구성할 수 있다.
   - 패키지는 물리적으로 클래스 파일(.class)을 포함하는 하나의 디렉토리이다.
 
-
+### 제어자(modifier)
+제어자(modifier)는 클래스, 변수 또는 메서드의 선언부에 함께 사용되어 부가적인 의미를 부여한다.
+  - 접근 제어자 : public, protected, default, private
+  - 그 외 : static, final, abstract, native, transient, synchronized, volatile, strictfp
+    - private : 같은 클래스 내에서만 접근이 가능하다.
+    - default : 같은 패키지 내에서만 접근이 가능하다.
+    - protected : 같은 패키지 내에서, 그리고 다른 패키지의 자손클래스에서 접근이 가능하다.
+    - public : 접근 제한이 전혀 없다.
+    - public > protected > (default) > private
+  - 접근 제어자를 사용하는 이유
+    - 외부로부터 데이터를 보호하기 위해서
+    - 외부에는 불필요한, 내부적으로만 사용되는, 부분을 감추기 위해서
 
 
 
