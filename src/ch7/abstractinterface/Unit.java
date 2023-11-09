@@ -1,7 +1,13 @@
 package ch7.abstractinterface;
 
 public class Unit {
-    int currentHP;
-    int x;
-    int y;
+    int hitPoint;
+    int MAX_HP = 10;
+
+    public Unit() {
+    }
+
+    Unit(int hp) {
+        MAX_HP = hp;
+    }
 }
