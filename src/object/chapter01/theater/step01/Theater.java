@@ -8,6 +8,16 @@ public class Theater {
     }
 
     public void enter(Audience audience) {
-
+        // 기존 소스
+//        if (audience.getBag().hasInvitation()) {
+//            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
+//            audience.getBag().setTicket(ticket);
+//        } else {
+//            Ticket ticket = ticketSeller.getTicketOffice().getTicket();
+//            audience.getBag().minusAmount(ticket.getFee());
+//            ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
+//            audience.getBag().setTicket(ticket);
+//        }
+        ticketSeller.sellTo(audience);
     }
 }
