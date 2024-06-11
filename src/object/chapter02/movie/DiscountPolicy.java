@@ -13,7 +13,7 @@ public abstract class DiscountPolicy {
 
     public Money calculateDiscountAmount(Screening screening) {
         for (DiscountCondition each : conditions) {
-            if (each.isSatisFiedBy(screening)) {
+            if (each.isSatisfiedBy(screening)) {
                 return getDiscountAmount(screening);
             }
         }
